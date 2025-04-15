@@ -14,6 +14,7 @@ with open("balo.INP") as f:
 dp = []
 for i in range(n):
     dp.append([0] * (s + 1))
+tong = 0
 
 for i in range(n):
     for j in range(s + 1):
@@ -22,6 +23,8 @@ for i in range(n):
             pass
         else:
             dp[i][j] = dp[i - 1][j]
+    if max(dp[i]) >= tong:
+        tong = max(dp[i])
 
-for i in dp:
-    print(i)
+with open("balo.OUT", "w") as f:
+    f.write(str(tong))
