@@ -1,3 +1,13 @@
+# Cho một dãy gồm n phần tử,tìm dãy con(không liên tiếp) , tăng dần (không ngặt) dài nhất
+
+# INPUT
+# Dòng đầu tiên chưa số n
+# Dòng thứ 2 gồm N số trong khoảng int
+
+# OUTPUT
+# Dòng duy nhất chứa độ dài dãy con tăng dài nhất
+
+# ----------------------------------------------
 # nếu a[i] > a[j] thì l[i] = max(l[i], l[j] + 1)
 # trong đó j là chỉ số sau i
 
