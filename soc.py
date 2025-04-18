@@ -10,7 +10,10 @@ with open("soc.INP") as f:
     n, k = list(map(int, f.readline().split()))
     a = list(map(int, f.readline().split()))
 
-t = [0] * n
-for i in range(n):
-    for j in range(k):
-        t[i] = max(t[i], )
+dp = [-float('inf')] * n
+dp[0] = 0
+for i in range(1, n):
+    for j in range(max(0, i - k), i): 
+        dp[i] = max(dp[i], dp[j] + a[i])
+
+print(max(dp))
